@@ -1,5 +1,8 @@
 discord
 arrow
+num2words
+spotify
+pyfiglet
 requests
 asyncio
 pymongo[srv]
