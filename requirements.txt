@@ -1,1 +1,3 @@
-Worker: Python main.py
+discord
+os
+asyncio
