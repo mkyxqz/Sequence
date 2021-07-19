@@ -1,5 +1,6 @@
 discord
 arrow
+gtts
 num2words
 spotify
 pyfiglet
