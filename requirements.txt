@@ -1,3 +1,5 @@
 discord
+arrow
+requests
 asyncio
 pymongo[srv]
