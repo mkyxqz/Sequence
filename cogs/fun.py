@@ -1,4 +1,4 @@
-import discord, requests, asyncio, random, pyfiglet, aiohttp, json, typing, spotify, unicodedata, functools, io, os
+import discord, requests, asyncio, random, pyfiglet, json, typing, spotify, unicodedata, functools, io, os
 from discord.ext import commands
 from discord.ext.commands import clean_content
 from utils.misc import cmd, logos, add_point
@@ -83,30 +83,6 @@ class Fun(commands.Cog):
               await ctx.message.reply(f"Text too long. Please enter short text.")
           else:
               await ctx.message.reply(f"```{pyfiglet.figlet_format(text)}```")
-
-  @commands.command(description="Shows cats", cls=cmd, example='cat', aliases=['cats'])
-  async def cat(self, ctx):
-      async with ctx.channel.typing():
-          async with aiohttp.ClientSession() as cs:
-              async with cs.get("http://aws.random.cat/meow") as r:
-                  data = await r.json()
-
-                  embed = discord.Embed(title = "🐱",color = self.client.color)
-                  embed.set_image(url = data['file'])
-
-                  await ctx.message.reply(embed=embed)
-
-  @commands.command(description="Shows dogs", cls=cmd, example='dog', aliases=['dogs'])
-  async def dog(self, ctx):
-      async with ctx.channel.typing():
-          async with aiohttp.ClientSession() as cs:
-              async with cs.get("http://random.dog/woof.json") as r:
-                  data = await r.json()
-
-                  embed = discord.Embed(title = "🐶", color = self.client.color)
-                  embed.set_image(url = data['url'])
-
-                  await ctx.message.reply(embed=embed)
 
   @commands.command(description="Turns ur text crazy", cls=cmd, example='crazy sequence')
   async def crazy(self, ctx, *, text=None):
