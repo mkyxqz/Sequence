@@ -1,9 +1,6 @@
 discord
 arrow
 gtts
-num2words
-spotify
-pyfiglet
 requests
 asyncio
 pymongo[srv]
